@@ -1,0 +1,198 @@
+/*====================
+Table of contents
+
+1. imports
+2. variables
+3. reset
+4. styles
+5. attribution
+6. media queries
+
+====================*/
+
+/*====================
+imports
+====================*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*====================
+variables
+====================*/
+:root {
+    --color-primary: hsl(245, 75%, 52%);
+    --color-white: hsl(255, 100%, 100%);
+    --color-pale-blue: hsl(225, 100%, 94%);
+    --color-very-pale-blue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-dark-blue: hsl(223, 47%, 23%);
+
+    --font-family: 'Red Hat Display';
+    --font-size: 1em;
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1rem;
+
+    --font-weight: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    --line-height: 1.5;
+    --line-height-h: 1.2;
+}
+
+/*====================
+reset
+====================*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*====================
+styles
+====================*/
+body {
+    background-color: var(--color-pale-blue);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--color-dark-blue);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.card {
+    background-color: var(--color-white);
+    border-radius: 18px;
+    box-shadow: 0 15px 30px hsla(245, 75%, 52%, 8%);
+    max-width: 450px;
+    padding: 0 24px 24px;
+    overflow: hidden;
+}
+
+.card h1, .card p {
+    text-align: center;
+}
+
+.image-hero {
+    max-width: calc(100% + 48px);
+    margin-right: -24px;
+    margin-left:-24px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-h);
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+p {
+    color: var(--color-desaturated-blue);
+    margin-bottom: 24px;
+    margin-inline: auto;
+    width: 30ch;
+}
+
+.plan {
+    background-color: var(--color-very-pale-blue);
+    border-radius: 12px;
+    align-items: center;
+    display: flex;
+    padding: 17px 15px;
+    margin-bottom: 24px;
+}
+.plan a {
+    color: var(--color-primary);
+    margin-left: auto;
+    cursor: pointer;
+}
+.plan a:hover, .plan a:focus {
+    color: hsla(245, 75%, 52%, 70%);
+    text-decoration: none;
+}
+
+.price {
+    color: var(--color-desaturated-blue);
+}
+
+.icon {
+    margin-right: 20px
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    height: 50px;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    margin-bottom: 16px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 15px 30px hsla(245, 75%, 52%, 20%);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: hsla(245, 75%, 52%, 70%);
+}
+
+.btn-secondary {
+    color: var(--color-desaturated-blue);
+    margin-bottom: 0;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+    color: var(--color-dark-blue);
+}
+
+/*====================
+attribution
+====================*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 24px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*====================
+media queries
+====================*/
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+
+    .card {
+        padding: 0 48px 48px;
+    }
+
+    .image-hero {
+        max-width: calc(100% + 96px);
+        margin-right: -48px;
+        margin-left: -48px;
+    }
+  }
